@@ -24,7 +24,7 @@ app.post("/tweets", (req, res) => {
     res.send("OK");
   });
   
-  app.get("/tweets", (req, res) => {
+app.get("/tweets", (req, res) => {
     const tenTT = [];
 
     if (tweets.length > 0) {
