@@ -29,10 +29,10 @@ app.post("/tweets", (req, res) => {
 
     if (tweets.length > 0) {
       for (let i = tweets.length - 1; i > tweets.length - 11 && i >= 0; i--) {
-          
+
         const body = {
           username: tweets[i].username,
-          avatar: users.find((item) => item.username === tweets[i].username),
+          avatar: users.find((item) => item.username === tweets[i].username).avatar,
           tweet: tweets[i].tweet,
         };
         tenTT.push(body);
